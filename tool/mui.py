@@ -32,7 +32,6 @@ async def on_ready():
             join_date = "Unknown"
         Username = str(Username)
         print(f"ID : {Id_acc.strip()}          Create : {Register}          Join : {join_date}          Username : {Username.strip()}")
-        #fw.write(f"ID : {Id_acc.strip()}          Create : {Register}          Join : {join_date}          Username : {Username.strip()}\n")
         fw.write(f"<@{Id_acc.strip()}>\n")
         hit = hit + 1
     fw.close()
