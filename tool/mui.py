@@ -1,9 +1,15 @@
-import discord, os, json, datetime, time, lib.logo as logo, asyncio, colorama
+import discord, os, json, sys, datetime, time, lib.logo as logo, asyncio, colorama
 from colorama import Fore
 with open('config.json') as f:
     config = json.load(f)
     
-os.system("clear")
+platform = sys.platform
+if platform == "linux" or platform == "linux2":
+    clear = "clear"
+else:
+    clear = "cls"
+    
+os.system(clear)
 token = config.get('token')
 date_format = "%a, %d %b %Y %I:%M %p"
 Ghoul = discord.Client()
