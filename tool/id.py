@@ -1,11 +1,15 @@
-import  os,discum, json, datetime, time, lib.logo as logo, colorama
+import  os,discum, json, sys, datetime, time, lib.logo as logo, colorama
 from colorama import Fore
 
-os.system("ls")
+platform = sys.platform
+if platform == "linux" or platform == "linux2":
+    clear = "clear"
+else:
+    clear = "cls"
 with open('config.json') as f:
     config = json.load(f)
 
-os.system("clear")
+os.system(clear)
 print(logo.logo)
 token = config.get('token')
 
