@@ -1,0 +1,4 @@
+colorama
+discord
+discum
+asyncio
