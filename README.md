@@ -7,8 +7,13 @@ pip install -r requirements.txt
 ```
 
 run the code 
+get all user info and mention
 ```
 ./start.sh
+```
+get all user mention
+```
+./fast.sh
 ```
 
 Set your token here :
